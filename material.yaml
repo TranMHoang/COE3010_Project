@@ -1,0 +1,145 @@
+material:
+  - constituents:
+      - phase: A
+        O: [0.26370004878185715, -0.535734924741531, -0.7555832675394406, -0.2693404917554254]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.042648247033737575, 0.39284088802733297, -0.5590524820138792, 0.7289152804496329]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.31932287185465785, -0.6503232931091364, 0.0011733840589975744, -0.6892830631315643]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.10136127548064099, -0.9398312338577509, -0.3252146346252944, 0.026049666483307386]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.03322310506958274, 0.9495355173177296, 0.17616159522128072, 0.25738224299819273]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.06190552319235603, 0.8207394880107814, 0.0969501911057629, -0.5596025906503982]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.2913918965664084, 0.0015777280873043966, 0.5740574263389264, 0.7652100003624117]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.2276754292151812, 0.46615836274580136, 0.19927748582131072, -0.8313535730473371]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.724434527866005, -0.3319745321918757, -0.11411171665238486, -0.5932672592804944]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: A
+        O: [0.66868774132368, -0.06107634860051909, -0.4167447909261666, -0.6127398823978808]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: B
+        O: [0.5573581252627562, 0.456708888136136, -0.44278499133359567, 0.5335825738821945]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: B
+        O: [0.021759206169030675, 0.3680367249209051, -0.9165303607333608, 0.15507289869723587]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: B
+        O: [0.28652897980412007, 0.5246749592884595, -0.7522554857221377, 0.2770000271281829]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: B
+        O: [0.5801752143287501, 0.6573537011463036, 0.09893106362731299, -0.47063305973700337]
+        v: 1.0
+    homogenization: dummy
+  - constituents:
+      - phase: B
+        O: [0.10510434526129851, 0.4918774418135709, -0.5142408685862998, -0.694669696991123]
+        v: 1.0
+    homogenization: dummy
+
+homogenization:
+  dummy:
+    N_constituents: 1
+    mechanical: {type: pass}
+
+phase:
+  A:
+    references: ['https://en.wikipedia.org/wiki/Iron']
+    lattice: cI
+    rho: 7874.0
+    mechanical:
+      output: [F, P, F_p, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ["D.J. Dever, Journal of Applied Physics 43(8):3293-3301, 1972, https://doi.org/10.1063/1.1661710 fit to Tab. II (T_min=25\xC2\xBAC, T_max=880\xC2\xBAC)"]
+        C_11: 232100000000.0
+        C_11,T: -46780000.0
+        C_11,T^2: -57620.0
+        C_12: 135900000000.0
+        C_12,T: -16950000.0
+        C_12,T^2: 1555.0
+        C_44: 117000000000.0
+        C_44,T: -20470000.0
+        C_44,T^2: -281.4
+        T_ref: 293.15
+      plastic:
+        type: phenopowerlaw
+        references: ['C.C. Tasan et al., Acta Materialia 81:386-400, 2014, https://doi.org/10.1016/j.actamat.2014.07.071', "U.F. Kocks, Metallurgical and Materials Transactions B 1:1121\xE2\u20AC\u201C1143, 1970, https://doi.org/10.1007/BF02900224"]
+        output: [xi_sl, gamma_sl]
+        N_sl: [12, 12]
+        n_sl: 20
+        a_sl: 2.25
+        h_0_sl-sl: 1000000000.0
+        xi_0_sl: [95000000.0, 96000000.0]
+        xi_inf_sl: [222000000.0, 412000000.0]
+        h_sl-sl: [1, 1.4, 1, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4]
+        dot_gamma_0_sl: 0.001
+  B:
+    references: ['https://en.wikipedia.org/wiki/Iron']
+    lattice: cI
+    rho: 7874.0
+    mechanical:
+      output: [F, P, F_p, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ["D.J. Dever, Journal of Applied Physics 43(8):3293-3301, 1972, https://doi.org/10.1063/1.1661710 fit to Tab. II (T_min=25\xC2\xBAC, T_max=880\xC2\xBAC)"]
+        C_11: 232100000000.0
+        C_11,T: -46780000.0
+        C_11,T^2: -57620.0
+        C_12: 135900000000.0
+        C_12,T: -16950000.0
+        C_12,T^2: 1555.0
+        C_44: 117000000000.0
+        C_44,T: -20470000.0
+        C_44,T^2: -281.4
+        T_ref: 293.15
+      plastic:
+        type: phenopowerlaw
+        references: ['C.C. Tasan et al., Acta Materialia 81:386-400, 2014, https://doi.org/10.1016/j.actamat.2014.07.071', "U.F. Kocks, Metallurgical and Materials Transactions B 1:1121\xE2\u20AC\u201C1143, 1970, https://doi.org/10.1007/BF02900224"]
+        output: [xi_sl, gamma_sl]
+        N_sl: [12, 12]
+        n_sl: 20
+        a_sl: 2.25
+        h_0_sl-sl: 1000000000.0
+        xi_0_sl: [142500000.0, 144000000.0]
+        xi_inf_sl: [222000000.0, 412000000.0]
+        h_sl-sl: [1, 1.4, 1, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4]
+        dot_gamma_0_sl: 0.001
