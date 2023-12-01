@@ -1,6 +1,11 @@
 WARNING: RE-RUNNING SIMULATIONS DELETE PREVIOUS SIMULATION DIRECTORIES. MOVE 
 .HDF5 FILES TO ANOTHER DIRECTORY BEFORE HAND, AND CHECK CONFIGURATION CAREFULLY.
 
+This project is a pipeline for running multiple DAMASK simulations using the Mahti
+supercomputer. The project aims to run several simulations efficiently, automate
+post-processing, and simplifies file input-output. This only works with DAMASK version
+3.0.0-alpha7.
+
 Config file in syntax:
 <Material 1> <load case 1> <load case 2> ...
 <Material 2> <load case 3> <load case 4> ...
