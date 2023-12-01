@@ -1,2 +1,4 @@
 # Typically very large files, ignore commit to git
 *.hdf5
+*.vti
+*.sif
