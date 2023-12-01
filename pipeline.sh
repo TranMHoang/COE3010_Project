@@ -71,6 +71,8 @@ do
     #srun apptainer_wrapper run --env OMP_NUM_THREADS=${OMP_NUM_THREADS} DAMASK_grid --load "${loadcases[n]}" --geom "${geometries[n]}" > "slurm_${geometries[n]}_${loadcases[n]:0:(-5)}.out"
 done
 wait
+# This is the postprocessing part. Ideally, postprocessing can also be done using sinteractive partition, but it is
+# here for convenience reason.
 for ((n=0; n<$N; n++))
 do
     mat=("${materials[n]}")
