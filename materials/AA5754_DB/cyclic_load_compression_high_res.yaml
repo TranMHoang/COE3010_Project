@@ -1,0 +1,99 @@
+solver: {mechanical: spectral_basic}
+
+loadstep:
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [-0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 60, N: 30}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [-0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [-0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [-0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [0.0003333, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 120, N: 60}
+    f_out: 1

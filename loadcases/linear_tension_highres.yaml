@@ -1,0 +1,27 @@
+solver: {mechanical: spectral_basic}
+
+loadstep:
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [1e-4, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 60, N: 20}
+    f_out: 1
+  - boundary_conditions:
+      mechanical:
+        dot_F:
+          - [1e-4, 0, 0]
+          - [0, x, 0]
+          - [0, 0, x]
+        P:
+          - [x, x, x]
+          - [x, 0, x]
+          - [x, x, 0]
+    discretization: {t: 1200, N: 1200}
+    f_out: 1
