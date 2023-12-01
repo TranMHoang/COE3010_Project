@@ -7,10 +7,15 @@ post-processing, and simplifies file input-output. This only works with DAMASK v
 3.0.0-alpha7.
 
 Config file in syntax:
+
 <Material 1> <load case 1> <load case 2> ...
+
 <Material 2> <load case 3> <load case 4> ...
+
 ...
+
 Accept load cases with and without .yaml file extension. Example:
+
 QP1000_DP linear_tensionX.yaml linear_tensionY.yaml tension_relax_cycle
 
 To run DAMASK simulations:
