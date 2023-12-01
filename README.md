@@ -21,8 +21,8 @@ To run DAMASK simulations:
         
     3.  Add materials and load cases to corresponding folder.
     
-    4.  Edit partition and time in pipeline.sh Recommended partition is
-        test or medium. Time should be ~ 1 hour per simulation
+    4.  Edit partition and time in pipeline.sh. Recommended partition is
+        medium. Time should be ~ 10 minutes per 100 increments
         
     5.  Open terminal in the working directory and submit job with
         sbatch pipeline.sh
