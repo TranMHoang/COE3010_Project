@@ -8,6 +8,8 @@
 # Accept load cases with and without .yaml file extension. Example:
 # QP1000_DP linear_tensionX.yaml linear_tensionY.yaml tension_relax_cycle
 #
-AA5754_DB test_load_1 test_load_2
-#AA5754_DB cyclic_load_compression_high_res spring_load_high_res
-#DP1000_DB spring_load_high_res cyclic_load_high_res
+#DP1000_DB linear_tension_lowres linear_tension_mediumres
+#AA5754_DB test_load_1 test_load_2
+#DP1000_DB_new linear_tension_mediumres cyclic_tension_highres cyclic_tension_compression_highres spring_load_highres
+#DP1000_DB cyclic_tension_highres cyclic_tension_compression_highres
+DP1000_DB spring_load_highres
